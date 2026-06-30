@@ -1,0 +1,98 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(4, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12 gap-6">
+
+    <!-- Header -->
+    <div class="flex items-start justify-between">
+      <div>
+        <span class="text-xs font-semibold tracking-widest uppercase"
+          style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">
+          Platform Capabilities
+        </span>
+        <h2 class="text-3xl font-bold mt-1"
+          style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">
+          Core Features
+        </h2>
+      </div>
+      <!-- Persona chips -->
+      <div class="flex gap-2 flex-wrap justify-end">
+        <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: {{config.brandColor.primary}}; color: #FFFFFF; font-family: {{config.font.textFont}}, sans-serif;">General Public</span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: {{config.brandColor.muted}}; color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Journalists</span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: {{config.brandColor.muted}}; color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Moderators</span>
+        <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: {{config.brandColor.muted}}; color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Researchers</span>
+      </div>
+    </div>
+
+    <!-- Feature cards grid -->
+    <div class="sl-grid grid flex-1 gap-4">
+
+      <!-- Feature 1 -->
+      <div class="rounded-2xl p-6 flex flex-col gap-3"
+        style="background-color: {{config.brandColor.primary}}; color: #FFFFFF;">
+        <span class="text-2xl">📋</span>
+        <h4 class="text-base font-bold" style="color: #FFFFFF; font-family: {{config.font.headingFont}}, sans-serif;">Paste & Verify</h4>
+        <p class="text-xs leading-relaxed" style="color: #CBD5E1; font-family: {{config.font.textFont}}, sans-serif;">Submit any post, URL, or typed claim for AI-powered analysis in seconds.</p>
+      </div>
+
+      <!-- Feature 2 -->
+      <div class="rounded-2xl p-6 flex flex-col gap-3"
+        style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <span class="text-2xl">🟢</span>
+        <h4 class="text-base font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">Clear Verdict</h4>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Color-coded result: True, Misleading, False, or Unverifiable — instantly scannable.</p>
+      </div>
+
+      <!-- Feature 3 -->
+      <div class="rounded-2xl p-6 flex flex-col gap-3"
+        style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <span class="text-2xl">📊</span>
+        <h4 class="text-base font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">Confidence Score</h4>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">A percentage showing how certain the AI analysis is — no bare assertions.</p>
+      </div>
+
+      <!-- Feature 4 -->
+      <div class="rounded-2xl p-6 flex flex-col gap-3"
+        style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <span class="text-2xl">🔗</span>
+        <h4 class="text-base font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">Source Citations</h4>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Linked sources supporting or refuting every verdict — full transparency.</p>
+      </div>
+
+      <!-- Feature 5 -->
+      <div class="rounded-2xl p-6 flex flex-col gap-3"
+        style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <span class="text-2xl">📜</span>
+        <h4 class="text-base font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">Verification History</h4>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Personal log of all previous fact-checks — searchable and re-shareable.</p>
+      </div>
+
+      <!-- Feature 6 -->
+      <div class="rounded-2xl p-6 flex flex-col gap-3"
+        style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <span class="text-2xl">📤</span>
+        <h4 class="text-base font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">Share Verdict</h4>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Share any fact-check result back to social media with one click.</p>
+      </div>
+
+      <!-- Feature 7 -->
+      <div class="rounded-2xl p-6 flex flex-col gap-3"
+        style="background-color: {{config.brandColor.accent}};">
+        <span class="text-2xl">🔥</span>
+        <h4 class="text-base font-bold" style="color: #FFFFFF; font-family: {{config.font.headingFont}}, sans-serif;">Trending Claims</h4>
+        <p class="text-xs leading-relaxed" style="color: #E0F2FE; font-family: {{config.font.textFont}}, sans-serif;">Community dashboard of the most-checked claims — see what's going viral.</p>
+      </div>
+
+      <!-- Positioning callout -->
+      <div class="rounded-2xl p-6 flex flex-col gap-2 justify-center"
+        style="background-color: {{config.brandColor.secondary}};">
+        <p class="text-xs font-semibold uppercase tracking-wide" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">Positioning</p>
+        <p class="text-xs leading-relaxed font-medium" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">Between newsroom-level fact-checkers (too slow) and generic AI (too opaque). Built for the moment of doubt.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
