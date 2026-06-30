@@ -1,0 +1,118 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-left { width: 55%; }
+  .mode-landscape .sl-right { width: 45%; }
+  .mode-portrait .sl-left { width: 100%; }
+  .mode-portrait .sl-right { width: 100%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12 gap-6">
+
+    <!-- Header -->
+    <div class="flex items-center justify-between">
+      <div>
+        <span class="text-xs font-semibold tracking-widest uppercase"
+          style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">
+          North Star Metric
+        </span>
+        <h2 class="text-3xl font-bold mt-1"
+          style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">
+          Weekly Verified Operations
+        </h2>
+      </div>
+      <span class="px-3 py-1 rounded-full text-xs font-semibold"
+        style="background-color: #FEF9C3; color: #92400E; font-family: {{config.font.textFont}}, sans-serif;">
+        Projected impact — based on your inputs
+      </span>
+    </div>
+
+    <div class="sl-layout flex flex-1 gap-6">
+
+      <!-- Left: Operation definition + formula -->
+      <div class="sl-left flex flex-col gap-5">
+
+        <!-- Verified operation definition -->
+        <div class="rounded-2xl p-6" style="background-color: {{config.brandColor.primary}};">
+          <p class="text-xs font-semibold uppercase tracking-wide mb-2" style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">The Verified Operation</p>
+          <h3 class="text-xl font-bold" style="color: #FFFFFF; font-family: {{config.font.headingFont}}, sans-serif;">Fact-Check Completed</h3>
+          <p class="text-sm mt-2 leading-relaxed" style="color: #94A3B8; font-family: {{config.font.textFont}}, sans-serif;">A claim submitted, AI-analyzed, and a verdict with source citations returned to the user. This is the primary operation {{config.appName}} exists to perform.</p>
+        </div>
+
+        <!-- Formula template -->
+        <div class="rounded-2xl p-6 flex flex-col gap-4" style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+          <p class="text-xs font-semibold uppercase tracking-wide" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">Weekly Volume Formula</p>
+
+          <div class="flex flex-col gap-2">
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="px-3 py-1 rounded-lg text-sm font-semibold" style="background-color: #FEF9C3; color: #92400E; font-family: {{config.font.textFont}}, sans-serif;">
+                [Active Users / week] — Assumption, adjust this
+              </span>
+              <span style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;" class="font-bold">×</span>
+              <span class="px-3 py-1 rounded-lg text-sm font-semibold" style="background-color: #FEF9C3; color: #92400E; font-family: {{config.font.textFont}}, sans-serif;">
+                [Checks / user / week] — Assumption, adjust this
+              </span>
+            </div>
+            <div class="flex items-center gap-2 mt-1">
+              <span style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;" class="text-sm">=</span>
+              <span class="text-2xl font-extrabold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">WVO / week</span>
+            </div>
+          </div>
+
+          <p class="text-xs italic" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">
+            Volume facts not yet provided — fill in your active user count and average checks per user per week to generate your projection.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right: Value derivation -->
+      <div class="sl-right flex flex-col gap-5">
+
+        <!-- Value per operation -->
+        <div class="rounded-2xl p-6 flex flex-col gap-3" style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+          <p class="text-xs font-semibold uppercase tracking-wide" style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Value Per Fact-Check</p>
+          <div class="flex flex-col gap-2">
+            <div class="flex items-start gap-2">
+              <span style="color: {{config.brandColor.accent}};" class="font-bold mt-0.5">→</span>
+              <span class="text-xs leading-relaxed" style="color: {{config.brandColor.foreground}}; font-family: {{config.font.textFont}}, sans-serif;">
+                Time saved vs. manual research:
+                <span class="px-2 py-0.5 rounded text-xs font-semibold" style="background-color: #FEF9C3; color: #92400E; font-family: {{config.font.textFont}}, sans-serif;">[X min] — Assumption</span>
+              </span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color: {{config.brandColor.accent}};" class="font-bold mt-0.5">→</span>
+              <span class="text-xs leading-relaxed" style="color: {{config.brandColor.foreground}}; font-family: {{config.font.textFont}}, sans-serif;">False shares prevented: downstream correction cost avoided per share</span>
+            </div>
+            <div class="flex items-start gap-2">
+              <span style="color: {{config.brandColor.accent}};" class="font-bold mt-0.5">→</span>
+              <span class="text-xs leading-relaxed" style="color: {{config.brandColor.foreground}}; font-family: {{config.font.textFont}}, sans-serif;">Credibility protected: trust capital for users and organizations who verify</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Total value block -->
+        <div class="rounded-2xl p-6 flex flex-col gap-3 flex-1 justify-center items-center text-center"
+          style="background-color: {{config.brandColor.accent}};">
+          <p class="text-xs font-semibold uppercase tracking-wide" style="color: #E0F2FE; font-family: {{config.font.textFont}}, sans-serif;">Total Weekly Value</p>
+          <p class="text-4xl font-extrabold" style="color: #FFFFFF; font-family: {{config.font.headingFont}}, sans-serif;">
+            WVO × Value/op
+          </p>
+          <p class="text-xs" style="color: #E0F2FE; font-family: {{config.font.textFont}}, sans-serif;">Fill in your numbers above to compute the annual projection (× 52 weeks)</p>
+          <div class="mt-3 px-4 py-2 rounded-xl" style="background-color: rgba(255,255,255,0.15);">
+            <p class="text-xs font-semibold" style="color: #FFFFFF; font-family: {{config.font.textFont}}, sans-serif;">Annual = Weekly Value × 52</p>
+          </div>
+        </div>
+
+        <!-- Watch this number -->
+        <div class="rounded-2xl p-4 flex items-center gap-3" style="background-color: {{config.brandColor.secondary}};">
+          <span class="text-xl">📍</span>
+          <p class="text-xs font-semibold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">
+            Watch this number every week: <strong>Fact-Checks Completed</strong>. When it grows, misinformation stops spreading. When it plateaus, investigate friction in the paste-and-verify flow.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
