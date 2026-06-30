@@ -1,0 +1,77 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+  .mode-landscape .sl-bottom { flex-direction: row; }
+  .mode-portrait .sl-bottom { flex-direction: column; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12 gap-6">
+
+    <!-- Header -->
+    <div>
+      <span class="text-xs font-semibold tracking-widest uppercase"
+        style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">
+        Measurable Outcomes
+      </span>
+      <h2 class="text-3xl font-bold mt-1"
+        style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">
+        Why It Matters
+      </h2>
+    </div>
+
+    <!-- Metric cards -->
+    <div class="sl-grid grid gap-4">
+
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <p class="text-xs font-semibold uppercase tracking-wide" style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Speed</p>
+        <p class="text-3xl font-extrabold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">&lt; 10s</p>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Average time from paste to verified verdict — fast enough to check before sharing.</p>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <p class="text-xs font-semibold uppercase tracking-wide" style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Transparency</p>
+        <p class="text-3xl font-extrabold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">100%</p>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">Every verdict ships with cited sources and a confidence score — no opaque black-box answers.</p>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <p class="text-xs font-semibold uppercase tracking-wide" style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Coverage</p>
+        <p class="text-3xl font-extrabold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">4 Verdicts</p>
+        <p class="text-xs leading-relaxed" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">True, Misleading, False, Unverifiable — nuanced enough for the real complexity of misinformation.</p>
+      </div>
+
+    </div>
+
+    <!-- ROI summary block -->
+    <div class="sl-bottom flex gap-4 flex-1">
+      <div class="flex-1 rounded-2xl p-7 flex flex-col justify-between"
+        style="background-color: {{config.brandColor.primary}};">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-wide" style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Strategic Value</p>
+          <h3 class="text-2xl font-bold mt-2" style="color: #FFFFFF; font-family: {{config.font.headingFont}}, sans-serif;">Stop Misinformation at the Source</h3>
+          <p class="text-sm mt-3 leading-relaxed" style="color: #94A3B8; font-family: {{config.font.textFont}}, sans-serif;">{{config.appName}} intercepts the share — the single highest-leverage moment in the misinformation lifecycle. One check by one user can prevent thousands of downstream shares.</p>
+        </div>
+        <div class="flex gap-3 mt-6 flex-wrap">
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: rgba(14,165,233,0.2); color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Neutral stance</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: rgba(14,165,233,0.2); color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Evidence-first</span>
+          <span class="px-3 py-1 rounded-full text-xs font-semibold" style="background-color: rgba(14,165,233,0.2); color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">Journalistic tone</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-4" style="width: 200px;">
+        <div class="flex-1 rounded-2xl p-5 flex flex-col justify-center items-center text-center"
+          style="background-color: {{config.brandColor.secondary}};">
+          <span class="text-2xl font-extrabold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">4</span>
+          <span class="text-xs mt-1" style="color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">User Personas Served</span>
+        </div>
+        <div class="flex-1 rounded-2xl p-5 flex flex-col justify-center items-center text-center"
+          style="background-color: {{config.brandColor.accent}};">
+          <span class="text-2xl font-extrabold" style="color: #FFFFFF; font-family: {{config.font.headingFont}}, sans-serif;">7</span>
+          <span class="text-xs mt-1" style="color: #E0F2FE; font-family: {{config.font.textFont}}, sans-serif;">Core Features Shipped</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
