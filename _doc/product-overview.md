@@ -10,10 +10,9 @@ Misinformation spreads faster than truth on social media. People encounter viral
 TruthGuard gives anyone — from a concerned citizen to a journalist — a fast, reliable fact-check for any social media claim. Paste a post, paste a URL, or type out a claim. The platform analyzes it against verified sources and returns a clear verdict (True / Misleading / False / Unverifiable), a confidence score, and cited sources — all in seconds.
 
 ## Target Users
-- **General public** — everyday social media users who want to verify claims before sharing
-- **Journalists and fact-checkers** — professionals who need a rapid first-pass research tool
-- **Content moderators** — teams managing misinformation on platforms
-- **Researchers and educators** — people studying or teaching about misinformation
+- **Primary: MZ generation Korean social media users** — Gen Z and younger Millennials who actively scroll, share, and engage on platforms like Twitter/X, Instagram, and TikTok; they encounter suspicious posts constantly and want a fast, casual way to verify before engaging or reposting
+- **Secondary: General social media users** — anyone who wants to verify a claim before sharing
+- **Secondary: Journalists and fact-checkers** — professionals who need a rapid first-pass research tool
 
 ## Core Features
 1. **Paste & Verify** — submit any social media post, URL, or typed claim for analysis
