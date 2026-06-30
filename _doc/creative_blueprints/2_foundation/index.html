@@ -1,0 +1,85 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-col { width: 50%; }
+  .mode-portrait .sl-col { width: 100%; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col h-full p-12 gap-8">
+
+    <!-- Header -->
+    <div>
+      <span class="text-xs font-semibold tracking-widest uppercase"
+        style="color: {{config.brandColor.accent}}; font-family: {{config.font.textFont}}, sans-serif;">
+        Why {{config.appName}}
+      </span>
+      <h2 class="text-3xl font-bold mt-1"
+        style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">
+        The Problem. The Fix.
+      </h2>
+    </div>
+
+    <!-- Two-column split -->
+    <div class="sl-layout flex flex-1 gap-6">
+
+      <!-- Problem -->
+      <div class="sl-col rounded-2xl p-8 flex flex-col gap-5"
+        style="background-color: {{config.brandColor.primary}};">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🔥</span>
+          <h3 class="text-xl font-bold" style="color: #FFFFFF; font-family: {{config.font.headingFont}}, sans-serif;">The Problem</h3>
+        </div>
+        <p class="text-base leading-relaxed" style="color: #CBD5E1; font-family: {{config.font.textFont}}, sans-serif;">
+          Misinformation spreads faster than truth on social media. Viral posts, fabricated screenshots, and misleading headlines reach thousands before any correction surfaces.
+        </p>
+        <ul class="flex flex-col gap-3 mt-2">
+          <li class="flex items-start gap-2">
+            <span style="color: {{config.brandColor.accent}};" class="mt-0.5 font-bold">→</span>
+            <span style="color: #E2E8F0; font-family: {{config.font.textFont}}, sans-serif;" class="text-sm">People share posts without verifying — by reflex, not malice</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span style="color: {{config.brandColor.accent}};" class="mt-0.5 font-bold">→</span>
+            <span style="color: #E2E8F0; font-family: {{config.font.textFont}}, sans-serif;" class="text-sm">Existing fact-checkers are too slow for the moment of sharing</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span style="color: {{config.brandColor.accent}};" class="mt-0.5 font-bold">→</span>
+            <span style="color: #E2E8F0; font-family: {{config.font.textFont}}, sans-serif;" class="text-sm">Generic AI tools give answers without showing sources or reasoning</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Solution -->
+      <div class="sl-col rounded-2xl p-8 flex flex-col gap-5"
+        style="background-color: {{config.brandColor.card}}; border: 1.5px solid {{config.brandColor.border}};">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">✅</span>
+          <h3 class="text-xl font-bold" style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">The Solution</h3>
+        </div>
+        <p class="text-base leading-relaxed" style="color: {{config.brandColor.foreground}}; font-family: {{config.font.textFont}}, sans-serif;">
+          {{config.appName}} gives anyone a fast, transparent fact-check for any social media claim — right at the moment they're about to share.
+        </p>
+        <ul class="flex flex-col gap-3 mt-2">
+          <li class="flex items-start gap-2">
+            <span style="color: {{config.brandColor.accent}};" class="mt-0.5 font-bold">→</span>
+            <span style="color: {{config.brandColor.foreground}}; font-family: {{config.font.textFont}}, sans-serif;" class="text-sm">Paste any post or claim — get a clear verdict in seconds</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span style="color: {{config.brandColor.accent}};" class="mt-0.5 font-bold">→</span>
+            <span style="color: {{config.brandColor.foreground}}; font-family: {{config.font.textFont}}, sans-serif;" class="text-sm">Every verdict comes with cited sources and a confidence score</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <span style="color: {{config.brandColor.accent}};" class="mt-0.5 font-bold">→</span>
+            <span style="color: {{config.brandColor.foreground}}; font-family: {{config.font.textFont}}, sans-serif;" class="text-sm">Built for the moment of doubt — fast enough to use before sharing</span>
+          </li>
+        </ul>
+        <div class="mt-auto pt-4 border-t" style="border-color: {{config.brandColor.border}};">
+          <p class="text-xs font-semibold italic" style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">
+            "{{config.tagline}}"
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
