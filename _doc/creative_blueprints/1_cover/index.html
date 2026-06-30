@@ -1,0 +1,66 @@
+<style>
+  .mode-landscape .sl-layout { flex-direction: row; }
+  .mode-portrait .sl-layout { flex-direction: column; }
+  .mode-landscape .sl-left { width: 52%; }
+  .mode-landscape .sl-right { width: 48%; }
+  .mode-portrait .sl-left { width: 100%; }
+  .mode-portrait .sl-right { width: 100%; height: 260px; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex h-full">
+
+    <!-- Left: Content -->
+    <div class="sl-left flex flex-col justify-between p-12" style="background-color: #ffffff;">
+      <!-- Top badge -->
+      <div>
+        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase"
+          style="background-color: {{config.brandColor.secondary}}; color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}, sans-serif;">
+          Social Media Fact-Checking
+        </span>
+      </div>
+
+      <!-- Headline & tagline -->
+      <div class="flex-1 flex flex-col justify-center gap-6">
+        <h1 class="text-6xl font-extrabold leading-none tracking-tight"
+          style="color: {{config.brandColor.primary}}; font-family: {{config.font.headingFont}}, sans-serif;">
+          {{config.appName}}
+        </h1>
+        <p class="text-2xl font-medium leading-snug"
+          style="color: {{config.brandColor.foreground}}; font-family: {{config.font.headingFont}}, sans-serif;">
+          {{config.tagline}}
+        </p>
+        <p class="text-base max-w-sm leading-relaxed"
+          style="color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">
+          AI-powered verification for any social media claim — paste, check, and share the truth in seconds.
+        </p>
+
+        <!-- Verdict chips -->
+        <div class="flex gap-2 flex-wrap mt-2">
+          <span class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: #DCFCE7; color: #15803D; font-family: {{config.font.textFont}}, sans-serif;">✓ True</span>
+          <span class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: #FEF9C3; color: #92400E; font-family: {{config.font.textFont}}, sans-serif;">⚠ Misleading</span>
+          <span class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: #FEE2E2; color: #991B1B; font-family: {{config.font.textFont}}, sans-serif;">✗ False</span>
+          <span class="px-3 py-1 rounded-full text-xs font-bold" style="background-color: {{config.brandColor.muted}}; color: {{config.brandColor.mutedForeground}}; font-family: {{config.font.textFont}}, sans-serif;">? Unverifiable</span>
+        </div>
+      </div>
+
+      <!-- Attribution -->
+      <div>
+        <data-attribution />
+      </div>
+    </div>
+
+    <!-- Right: Hero Visual -->
+    <div class="sl-right relative overflow-hidden"
+      style="background-color: {{config.brandColor.primary}};">
+      <img
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=A%20clean%20digital%20interface%20showing%20a%20social%20media%20post%20being%20fact-checked%2C%20with%20a%20bold%20verdict%20label%20and%20source%20citations%2C%20deep%20navy%20and%20sky%20blue%20tones%2C%20editorial%20minimalist%20style"
+        class="w-full h-full object-cover opacity-80"
+        alt="TruthGuard fact-check interface"
+      />
+      <!-- Overlay gradient -->
+      <div class="absolute inset-0" style="background: linear-gradient(to right, {{config.brandColor.primary}}22, transparent);"></div>
+    </div>
+
+  </div>
+</section>
