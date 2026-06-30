@@ -1,0 +1,1 @@
+Um, build me an app which could help me fact-check of the social media. Push. I wanted to inform you whether the birth... ...are spreading misinformation or is a real fact.
